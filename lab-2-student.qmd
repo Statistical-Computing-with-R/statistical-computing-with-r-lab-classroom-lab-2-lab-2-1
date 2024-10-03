@@ -5,6 +5,7 @@ format: html
 editor: source
 embed-resources: true
 code-tools: true
+code-fold: true
 ---
 
 # Part 1: GitHub Workflow
