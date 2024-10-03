@@ -147,6 +147,13 @@ the $x$-axis) and `hindfoot_length` (on the $y$-axis).**
 ```{r}
 #| label: scatterplot
 
+ggplot(data = surveys,
+       mapping = aes(x = weight,
+                     y = hindfoot_length,
+                     alpha = 0.5
+       )) +
+  geom_point() +
+  facet_wrap(facets = var(species))
 ```
 
 We can see there are **a lot** of points plotted on top of each other. Let's try and modify this plot to extract more information from it.
