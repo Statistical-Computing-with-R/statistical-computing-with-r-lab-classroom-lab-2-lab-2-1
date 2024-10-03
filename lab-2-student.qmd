@@ -105,16 +105,20 @@ represent:
 
 ```{r}
 #| label: load-data
+#| message: false
 
+surveys <- read_csv("C:/STAT 331 R/Week 2/Lab 2/lab-2-eleback/data/surveys.csv")
 ```
 
 **2. What are the dimensions (# of rows and columns) of these data?**
 
-<!-- You can either write code here or in the code chunk for #1, but I **must** see the code you used to address this question!  -->
+There are 30463 rows and 15 columns in this dataset.
 
 **3. What are the data types of the variables in this dataset?**
 
-<!-- You can either write code here or in the code chunk for #1, but I **must** see the code you used to address this question!  -->
+The variables species_id, sex, day_of_week, plot_type, genus, species, and taxa are all character types.
+The variables record_id, month, day, year, plot_id, hindfoot_length, and weight are double type.
+The variable date has a date type.
 
 # Exploratory Data Analysis with **`ggplot2`**
 
