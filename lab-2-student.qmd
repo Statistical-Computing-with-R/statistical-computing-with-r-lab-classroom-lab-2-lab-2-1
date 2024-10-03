@@ -1,6 +1,6 @@
 ---
 title: "Lab 2: Exploring Rodents with `ggplot2`"
-author: "Your name here!"
+author: "Ella Leback!"
 format: html
 editor: source
 embed-resources: true
@@ -63,6 +63,8 @@ In the code chunk below, load in the packages necessary for your analysis. You s
 
 ```{r}
 #| label: setup
+
+library(tidyverse)
 
 ```
 
