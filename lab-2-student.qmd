@@ -63,6 +63,7 @@ In the code chunk below, load in the packages necessary for your analysis. You s
 
 ```{r}
 #| label: setup
+#| message: false
 
 library(tidyverse)
 
