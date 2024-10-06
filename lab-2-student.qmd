@@ -6,6 +6,7 @@ editor: source
 embed-resources: true
 code-tools: true
 code-fold: true
+error: true
 ---
 
 # Part 1: GitHub Workflow
@@ -66,6 +67,7 @@ In the code chunk below, load in the packages necessary for your analysis. You s
 #| message: false
 
 library(tidyverse)
+library(here)
 
 ```
 
@@ -106,8 +108,13 @@ represent:
 ```{r}
 #| label: load-data
 #| message: false
+#| show_col_types: false
 
-surveys <- read_csv("C:/STAT 331 R/Week 2/Lab 2/lab-2-eleback/data/surveys.csv")
+#using "here" in posit cloud due to git challenges in RStudio 
+
+surveys <- read_csv(here::here("data", "surveys.csv"))
+
+#surveys <- read_csv(here::here("Week 2", "Lab 2", "lab-2-eleback", "data", "surveys.csv"))
 ```
 
 **2. What are the dimensions (# of rows and columns) of these data?**
