@@ -6,6 +6,7 @@ editor: source
 embed-resources: true
 code-tools: true
 code-fold: true
+echo: true
 ---
 
 # Part 1: GitHub Workflow
@@ -189,9 +190,8 @@ It takes a larger cognitive load to read text that is rotated. It is common prac
 #| label: boxplot
 
 ggplot(data = surveys,
-<<<<<<< HEAD
        mapping = aes(x = species,
-         y = weight)) +
+                     y = weight)) +
   geom_boxplot(outliers = FALSE) + 
   # geom_point()
   geom_jitter(aes(color = "steelblue",
@@ -199,15 +199,7 @@ ggplot(data = surveys,
   labs(x = "Species",
        y = "Weight (g)") +
   theme(axis.text.x = element_text(angle = 45))
-  
-=======
-       mapping = aes(x = species_id,
-         y = weight)) +
-  geom_boxplot() + 
-  # geom_point()
-  geom_jitter(aes(color = "steelblue",
-                  alpha = 0.5))
->>>>>>> cf05e0734e2959ecdafa768951a5b38901ea3d68
+
 ```
 
 **10. Create side-by-side boxplots to visualize the distribution of weight within each species.**
@@ -295,13 +287,14 @@ might want to look up the help documentation for `aov()`.
 ```{r}
 #| label: anova
 
-species_mod <- aov()
+species_mod <- aov(data = surveys, weight ~ species)
 
 summary(species_mod)
 ```
 
 **18. Based on the results of the ANOVA F-test, draw a conclusion in context of the hypotheses. Make sure to cite appropriate output from above.**
 
+Based on our one-way ANOVA model results, we have significant evidence (p = 0, F = 19916) to suggest that at least one rodent species has a different population mean weight.
 
 # Lab 2 Submission
 
