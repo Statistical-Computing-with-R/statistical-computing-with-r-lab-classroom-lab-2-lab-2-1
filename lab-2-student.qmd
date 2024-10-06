@@ -188,7 +188,13 @@ It takes a larger cognitive load to read text that is rotated. It is common prac
 ```{r}
 #| label: boxplot
 
-
+ggplot(data = surveys,
+       mapping = aes(x = species_id,
+         y = weight)) +
+  geom_boxplot() + 
+  # geom_point()
+  geom_jitter(aes(color = "steelblue",
+                  alpha = 0.5))
 ```
 
 **10. Create side-by-side boxplots to visualize the distribution of weight within each species.**
