@@ -160,7 +160,7 @@ ggplot(data = surveys,
                      alpha = 0.5
        )) +
   geom_point() +
-  facet_wrap(facets = var(species))
+  facet_wrap(facets = species_id)
 ```
 
 We can see there are **a lot** of points plotted on top of each other. Let's try and modify this plot to extract more information from it.
