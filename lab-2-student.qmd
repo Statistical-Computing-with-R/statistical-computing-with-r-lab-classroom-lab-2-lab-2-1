@@ -7,6 +7,7 @@ embed-resources: true
 code-tools: true
 code-fold: true
 echo: true
+error: true
 ---
 
 # Part 1: GitHub Workflow
