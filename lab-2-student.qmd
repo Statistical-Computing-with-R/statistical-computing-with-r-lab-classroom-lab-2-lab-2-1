@@ -107,7 +107,7 @@ represent:
 #| label: load-data
 #| message: false
 
-surveys <- read_csv("C:/STAT 331 R/Week 2/Lab 2/lab-2-eleback/data/surveys.csv")
+surveys <- read_csv(here::here("data", "surveys.csv"))
 ```
 
 **2. What are the dimensions (# of rows and columns) of these data?**
@@ -153,7 +153,11 @@ ggplot(data = surveys,
                      alpha = 0.5
        )) +
   geom_point() +
-  facet_wrap(facets = var(species))
+  facet_wrap(facets = vars(species)) +
+  labs(title = "Effect of penguin weight on hind foot length by species",
+       subtitle = "Hindfoot length (mm)",
+       x = "Weight (grams)",
+       y = NULL)
 ```
 
 We can see there are **a lot** of points plotted on top of each other. Let's try and modify this plot to extract more information from it.
